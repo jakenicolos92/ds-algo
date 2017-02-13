@@ -1,4 +1,4 @@
-package com.sks.learn.dsalgo;
+package com.sks.learn.algo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class QuickFindUF {
 	 * Inner Class for Data
 	 *
 	 */
-	class QFData {
+	public class QFData {
 		int id;
 		int value;
 		boolean hasConnection;

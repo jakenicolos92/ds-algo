@@ -1,4 +1,4 @@
-package com.sks.learn.dsalgo;
+package com.sks.learn.algo;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package com.sks.learn.dsalgo.utility;
+package com.sks.learn.algo.utility;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

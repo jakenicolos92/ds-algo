@@ -7,8 +7,9 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import com.sks.learn.dsalgo.sorting.InsertionSort;
-import com.sks.learn.dsalgo.utility.CSVReader;
+import com.sks.learn.algo.sorting.InsertionSort;
+import com.sks.learn.algo.utility.CSVReader;
+
 
 /**
  * @author Sujit

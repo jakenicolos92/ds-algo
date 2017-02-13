@@ -2,7 +2,7 @@
  *@Author: Sujit K Singh
  *Data Structure & Algorithm 
  */
-package com.sks.learn.dsalgo.sorting;
+package com.sks.learn.algo.sorting;
 
 import java.util.ArrayList;
 

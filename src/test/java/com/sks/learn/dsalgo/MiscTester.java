@@ -1,9 +1,21 @@
 package com.sks.learn.dsalgo;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.util.List;
+
 import org.junit.Test;
 
+import com.sks.learn.algo.QuickFindUF;
+import com.sks.learn.algo.QuickFindUF.QFData;
+import com.sks.learn.algo.QuickUnion;
+import com.sks.learn.algo.UnionFind;
+import com.sks.learn.ds.StackImplementation;
+import com.sks.learn.ds.StackInterface;
+
 public class MiscTester {
-/*
+
 	@Test
 	public void testUnionFind() {
 		UnionFind uf = new UnionFind();
@@ -33,7 +45,7 @@ public class MiscTester {
 		qf.union(qfDataList.get(9), qfDataList.get(0));
 		assertTrue(qf.isConnected(qfDataList.get(1), qfDataList.get(9)));
 	}
-*/
+
 	@Test
 	public void testQuickUnion() {
 		QuickUnion qu = new QuickUnion(10);
@@ -42,5 +54,32 @@ public class MiscTester {
 		qu.union(6, 5);
 		qu.union(9, 4);
 		qu.union(5, 0);
+	}
+
+	@Test
+	public void testStack() {
+		StackInterface s = new StackImplementation();
+		assertTrue(s.isEmpty());
+		s.push("1");
+		s.printStackContent();
+		s.push("2");
+		s.printStackContent();
+		s.push("3");
+		s.printStackContent();
+		System.out.println(s.peek());
+		s.printStackContent();
+		System.out.println(s.pop());
+		s.printStackContent();
+		s.push("5");
+		s.printStackContent();
+		System.out.println(s.pop());
+		s.printStackContent();
+		System.out.println(s.pop());
+		s.printStackContent();
+		System.out.println(s.peek());
+		s.printStackContent();
+		s.printStackContent();
+		System.out.println(s.pop());
+		s.printStackContent();
 	}
 }
