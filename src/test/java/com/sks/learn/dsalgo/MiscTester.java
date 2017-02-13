@@ -11,8 +11,11 @@ import com.sks.learn.algo.QuickFindUF;
 import com.sks.learn.algo.QuickFindUF.QFData;
 import com.sks.learn.algo.QuickUnion;
 import com.sks.learn.algo.UnionFind;
-import com.sks.learn.ds.StackImplementation;
+import com.sks.learn.ds.QueuLinkedListImpl;
+import com.sks.learn.ds.QueueInterface;
+import com.sks.learn.ds.StackArrayImpl;
 import com.sks.learn.ds.StackInterface;
+import com.sks.learn.ds.StackLinkedListImpl;
 
 public class MiscTester {
 
@@ -57,8 +60,9 @@ public class MiscTester {
 	}
 
 	@Test
-	public void testStack() {
-		StackInterface s = new StackImplementation();
+	public void testStack_LinkedList() {
+		System.out.println("************** STACK :: LINKED LIST IMPLEMENTATION **************");
+		StackInterface s = new StackLinkedListImpl();
 		assertTrue(s.isEmpty());
 		s.push("1");
 		s.printStackContent();
@@ -82,4 +86,53 @@ public class MiscTester {
 		System.out.println(s.pop());
 		s.printStackContent();
 	}
+	@Test
+	public void testStack_Array() {
+		System.out.println("************** STACK :: ARRAY IMPLEMENTATION **************");
+		StackInterface s = new StackArrayImpl();
+		assertTrue(s.isEmpty());
+		s.push("1");
+		s.printStackContent();
+		s.push("2");
+		s.printStackContent();
+		s.push("3");
+		s.printStackContent();
+		System.out.println(s.peek());
+		s.printStackContent();
+		System.out.println(s.pop());
+		s.printStackContent();
+		s.push("5");
+		s.printStackContent();
+		System.out.println(s.pop());
+		s.printStackContent();
+		System.out.println(s.pop());
+		s.printStackContent();
+		System.out.println(s.peek());
+		s.printStackContent();
+		s.printStackContent();
+		System.out.println(s.pop());
+		s.printStackContent();
+	}
+	
+	@Test
+	public void testQueue_Array() {
+		System.out.println("************** QUEUE :: LINKED LIST IMPLEMENTATION **************");
+		QueueInterface q = new QueuLinkedListImpl();
+		assertTrue(q.isEmpty());
+		q.enqueue("1");
+		q.printQueueContent();
+		q.enqueue("2");
+		q.printQueueContent();
+		q.enqueue("3");
+		q.printQueueContent();
+		System.out.println(q.dequeu());
+		q.printQueueContent();
+		q.enqueue("5");
+		q.printQueueContent();
+		System.out.println(q.dequeu());
+		q.printQueueContent();
+		System.out.println(q.dequeu());
+		q.printQueueContent();
+	}
+	
 }

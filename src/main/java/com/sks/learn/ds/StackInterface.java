@@ -12,9 +12,7 @@ public interface StackInterface {
 
 	public Object peek();
 
-	public int size();
-
 	public boolean isEmpty();
-	
+
 	public void printStackContent();
 }
